@@ -10,9 +10,9 @@ body {
 } 
 
 .box0 {
-    width: 350px;
-    height: 350px;
-    padding: 2rem;
+    width: 300px;
+    height: 300px;
+    padding: 1.6rem;
     margin: 150px auto;
     border-radius: 30px;
     box-shadow:  12px 12px 24px 0 rgba(0,0,0,0.2),
