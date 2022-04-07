@@ -1,0 +1,87 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #daeaf8;
+
+} 
+
+.box0 {
+    width: 350px;
+    height: 350px;
+    padding: 2rem;
+    margin: 150px auto;
+    border-radius: 30px;
+    box-shadow:  12px 12px 24px 0 rgba(0,0,0,0.2),
+             -12px -12px 24px 0 rgba(255,255,255,0.5)  
+
+}
+.box-pressed {
+    box-shadow: inset 6px 6px 10px rgba(0,0,0,0.2),
+    inset -6px -6px 10px rgba(255,255,255,0.5);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-2px) /*Accountfor the clock hand*/
+
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(21, 21, 90);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    /* transition: all 0.05s; */
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.sec-hand {
+    background: rgb(212, 29, 29);
+    height: 3px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background: rgb(212, 29, 29);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    
+    position: absolute;
+    top: 48.4%;
+    right: 47%;
+    z-index: 1;
+}
+
+.hour-hand {
+    width: 40%;
+    height: 6px;
+    right: 50%;
+    transform-origin: 100%;
+}
+
+@media (min-width: 700px) {
+    .box0 {
+        width: 400px;
+        height: 400px;
+        margin: 150px auto;
+        border-radius: 30px;
+        box-shadow:  12px 12px 24px 0 rgba(0,0,0,0.2),
+                 -12px -12px 24px 0 rgba(255,255,255,0.5)  
+    
+    }
+    .box-pressed {
+        box-shadow: inset 6px 6px 10px rgba(0,0,0,0.2),
+        inset -6px -6px 10px rgba(255,255,255,0.5);
+    }
+}
